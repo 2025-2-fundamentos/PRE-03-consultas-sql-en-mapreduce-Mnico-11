@@ -107,8 +107,6 @@ def reducer_query_4(sequence):
     """Reducer"""
     return sequence
 
-
-
 #
 # SELECT sex, count(*)
 # FROM tips
@@ -133,8 +131,6 @@ def reducer_query_5(sequence):
             counter[key] = 0
         counter[key] += value
     return list(counter.items())
-
-
 
 #
 # ORQUESTADOR:
@@ -194,5 +190,7 @@ def run():
         reducer_fn=reducer_query_5,
     )    
 
+
 if _name_ == "_main_":
-  run()
+
+    run()
